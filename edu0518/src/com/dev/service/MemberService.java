@@ -1,5 +1,4 @@
 package com.dev.service;
-
 import java.util.ArrayList;
 
 import com.dev.dao.MemberDAO;
@@ -9,12 +8,10 @@ public class MemberService {
 	private static MemberService service = new MemberService();
 	public MemberDAO dao = MemberDAO.getInstance();
 	private MemberService () {}
-	
 	public static MemberService getInstance()
 	{
 		return service;
 	}
-	
 	public void memberInsert(MemberVO member)
 	{
 		dao.memberInsert(member);
@@ -28,10 +25,13 @@ public class MemberService {
 	{
 		dao.memberUpdate(member);
 	}
-	
-
 	public ArrayList<MemberVO> memberListAll() {
 		// TODO Auto-generated method stub
 		return dao.memberListAll();
+	}
+
+	public void memberDelete(MemberVO member) {
+		dao.memberDelete(member);
+		
 	}
 }

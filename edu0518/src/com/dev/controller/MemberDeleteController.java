@@ -25,7 +25,7 @@ public class MemberDeleteController implements Controller {
 		
 		//service
 		MemberService service = MemberService.getInstance();
-		service.memberInsert(member);
+		service.memberDelete(member);
 		
 		request.setAttribute("id", id);
 		HttpUtill.forward(request, response, "/result/memberDeleteOutput.jsp");		

@@ -25,7 +25,7 @@ public class MemberUpdateController implements Controller {
 		
 		//service
 		MemberService service = MemberService.getInstance();
-		service.memberInsert(member);
+		service.memberUpdate(member);
 		
 		request.setAttribute("id", id);
 		HttpUtill.forward(request, response, "/result/memberUpdateOutput.jsp");		
