@@ -22,7 +22,7 @@ public class MemberDAO {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:8080/test","root","woehddb5555!");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","woehddb5555!");
 		}
 		catch(Exception e)
 		{
