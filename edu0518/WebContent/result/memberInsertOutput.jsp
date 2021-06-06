@@ -11,5 +11,6 @@
 		String id = (String)request.getAttribute("id");
 	%>
 	<%=id %>: Login Success!
+	<br><%@ include file = "home.jsp" %>
 </body>
 </html>

@@ -1,11 +1,7 @@
 package com.dev.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.ArrayList;
-
+import java.sql.*;
 import com.dev.vo.MemberVO;
 
 public class MemberDAO {
@@ -84,7 +80,7 @@ public class MemberDAO {
 			}
 			catch(Exception e)
 			{
-				System.out.println("MDAO:mInsert"+e);				
+				System.out.println("Insert Error!"+e);				
 			}
 			finally
 			{
@@ -113,7 +109,7 @@ public class MemberDAO {
 			}
 			catch(Exception e)
 			{
-				System.out.println("MSearch error"+e);				
+				System.out.println("Search Error!"+e);				
 			}
 			finally
 			{
@@ -136,7 +132,7 @@ public class MemberDAO {
 			}
 			catch(Exception e)
 			{
-				System.out.println("MDAO:mInsert"+e);				
+				System.out.println(""+e);				
 			}
 			finally
 			{
@@ -166,7 +162,7 @@ public class MemberDAO {
 			}
 			catch(Exception e)
 			{
-				System.out.println("MSearch error"+e);				
+				System.out.println("List Error!"+e);				
 			}
 			finally
 			{
@@ -174,22 +170,22 @@ public class MemberDAO {
 			}
 			return list;
 		}
-		public void memberDelete(MemberVO member)
-		{
+
+		public void memberDelete(String id) {
+			// TODO Auto-generated method stub
 			Connection conn = null;
 			PreparedStatement pstmt = null;
+			
 			try
 			{
 				conn = connect();
-				pstmt = conn.prepareStatement("delete from oneline where values(?,?,?);");
-				pstmt.setString(1, member.getId());
-				pstmt.setString(2, member.getPwd());
-				pstmt.setString(3, member.getName());
+				pstmt = conn.prepareStatement("delete from member where id=?");
+				pstmt.setString(1, id);
 				pstmt.executeUpdate();
 			}
 			catch(Exception e)
 			{
-				System.out.println("MDAO:mInsert"+e);				
+				System.out.println("Delete Error!"+e);				
 			}
 			finally
 			{

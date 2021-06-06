@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import ="com.dev.vo.MemberVO" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		MemberVO member = (MemberVO)request.getAttribute("member");
-		String id = member.getId();
-		String pwd = member.getPwd();
-		String name = member.getName();
-	%>
-	<%= id %>/<%= pwd %>/<%= name %>
+	<h3>회원정보 삭제가 완료되었습니다.</h3>
+	<%@ include file = "home.jsp" %>
 </body>
 </html>

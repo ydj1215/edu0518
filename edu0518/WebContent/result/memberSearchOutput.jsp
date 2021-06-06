@@ -14,6 +14,7 @@
 		String pwd = member.getPwd();
 		String name = member.getName();
 	%>
-	<%= id %>/<%= pwd %>/<%= name %>
+	<%= id %>/<%= pwd %>/<%= name %><br>
+	<%@ include file = "home.jsp" %>
 </body>
 </html>

@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@page import="java.util.ArrayList"%>
-    <%@page import="com.dev.vo.MemberVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.dev.vo.MemberVO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,7 @@
 <body>
 	<%
 	ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");
-	if(list.isEmpty())
+	if(!list.isEmpty())
 	{
 	%>
 		<table border = "1">
@@ -27,10 +26,11 @@
 	<%
 		}
 	}else
-	{%>
-	</table>
-	<%
+	{
+		out.print("등록된 회원정보가 없습니다.");
 	}
 	%>
+	</table><br>
+	<%@ include file = "home.jsp" %>
 </body>
 </html>

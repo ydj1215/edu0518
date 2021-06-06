@@ -27,11 +27,12 @@ public class MemberService {
 	}
 	public ArrayList<MemberVO> memberListAll() {
 		// TODO Auto-generated method stub
-		return dao.memberListAll();
+		ArrayList<MemberVO> list = dao.memberListAll();
+		return list;
 	}
 
-	public void memberDelete(MemberVO member) {
-		dao.memberDelete(member);
-		
+	public void memberDelete(String id) {
+		// TODO Auto-generated method stub
+		dao.memberDelete(id);
 	}
 }
