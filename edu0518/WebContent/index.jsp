@@ -12,6 +12,6 @@
 <a href = "memberSearch.jsp">회원 정보 검색</a><br>
 <a href = "memberUpdate.jsp">회원 정보 수정</a><br>
 <a href = "memberDelete.jsp">회원 정보 삭제</a><br>
-<a href = "memberListAll.jsp">모든 회원 정보 보기</a><br>
+<a href = "memberListAll.do">모든 회원 정보 보기</a><br>
 </body>
 </html>
